@@ -10,7 +10,7 @@ HIGHT = 800
 WORD = "Pygame 遊戲製作"
 FPS = 60
 BLACK = (0, 0, 0)
-Green = (0, 255, 0)
+GREEN = (0, 255, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 
@@ -148,7 +148,7 @@ class Player(pygame.sprite.Sprite):
         b_r_right.add(big_rocks_right)
         
     def collide(self):
-        self.image.fill(Green)
+        self.image.fill(GREEN)
         
     def not_collide(self):
         self.image.fill(RED)
@@ -346,7 +346,7 @@ def draw_health(surf, hp, x, y):
     fill = (hp/20000)*BAR_HEIGTH
     outline_rect = pygame.Rect(x, y, BAR_HEIGTH ,BAR_LENGTH)
     fill_rect = pygame.Rect(x, y, fill, BAR_LENGTH)
-    pygame.draw.rect(surf, Green, fill_rect)
+    pygame.draw.rect(surf, GREEN, fill_rect)
     pygame.draw.rect(surf, WHITE, outline_rect, 2)
 
 def draw_win():
